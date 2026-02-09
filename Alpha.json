@@ -1,0 +1,59 @@
+{
+    "project_name": "Project Alpha",
+    "version": "1.0.0",
+    "description": "This is the Alpha project.",
+    "author": "Alice Smith",
+    "license": "MIT",
+    "uuid": "cNoyJM4C1eYoEhPnag8=",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alicesmith/project-alpha.git"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "test": "jest",
+        "build": "webpack"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongoose": "^5.10.9",
+        "cors": "^2.8.5"
+    },
+    "devDependencies": {
+        "jest": "^26.6.0",
+        "webpack": "^5.4.0"
+    },
+    "environment": {
+        "NODE_ENV": "development",
+        "PORT": 3000
+    },
+    "database": {
+        "url": "mongodb://localhost:27017/project-alpha",
+        "options": {
+            "useNewUrlParser": true,
+            "useUnifiedTopology": true
+        }
+    },
+    "logging": {
+        "level": "info",
+        "transports": [
+            {
+                "type": "console",
+                "format": "simple"
+            },
+            {
+                "type": "file",
+                "filename": "logs/project-alpha.log"
+            }
+        ]
+    },
+    "features": {
+        "authentication": true,
+        "caching": false,
+        "rateLimiting": {
+            "enabled": true,
+            "maxRequests": 100,
+            "windowMs": 60000
+        }
+    }
+}

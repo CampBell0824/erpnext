@@ -1,0 +1,25 @@
+{
+    "baseUrl": "",
+    "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+    "name": "chess(fen)",
+    "variations": [
+        {
+            "buttons": [
+                { "text": "OK", "primary": true  },
+                { "text": "Cancel", "primary": false }
+            ],
+            "description": "chess",
+            "EditorsSupport": ["word", "cell", "slide"],
+            "icons": ["chess/icon.png", "chess/icon@2x.png"],
+            "initData": "",
+            "initDataType": "ole",
+            "initOnSelectionChanged": true,
+            "isInsideMode": false,
+            "isModal": true,
+            "isUpdateOleOnResize": true,
+            "isViewer": true,
+            "isVisual": true,
+            "url": "chess/index.html"
+        }
+    ]
+};

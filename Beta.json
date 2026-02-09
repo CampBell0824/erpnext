@@ -1,0 +1,57 @@
+{
+    "project_name": "Project Beta",
+    "version": "1.2.0",
+    "description": "This is the Beta project.",
+    "author": "Bob Johnson",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bobjohnson/project-beta.git"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "test": "mocha",
+        "lint": "eslint ."
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "jsonwebtoken": "^8.5.1",
+        "bcryptjs": "^2.4.3"
+    },
+    "devDependencies": {
+        "mocha": "^8.2.1",
+        "chai": "^4.2.0",
+        "eslint": "^7.14.0"
+    },
+    "environment": {
+        "NODE_ENV": "production",
+        "PORT": 8080
+    },
+    "database": {
+        "url": "mysql://user:password@localhost:3306/project_beta",
+        "options": {
+            "dialect": "mysql",
+            "logging": false
+        }
+    },
+    "logging": {
+        "level": "warn",
+        "transports": [
+            {
+                "type": "file",
+                "filename": "logs/project-beta.log",
+                "maxSize": "20m",
+                "maxFiles": "14d"
+            }
+        ]
+    },
+    "features": {
+        "authentication": true,
+        "caching": true,
+        "rateLimiting": {
+            "enabled": true,
+            "maxRequests": 50,
+            "windowMs": 60000
+        }
+    }
+}
